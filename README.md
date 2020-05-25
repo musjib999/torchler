@@ -1,16 +1,5 @@
-# torchler
+# torchler 
+#Torchlight app made with flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20200518-163414](https://user-images.githubusercontent.com/53815937/82731701-9f83d780-9d00-11ea-8ff1-0f9e4e28ed65.png)
+![Screenshot_20200518-163407](https://user-images.githubusercontent.com/53815937/82731766-fe495100-9d00-11ea-9e7d-ee4f9ee6efb7.png)
