@@ -58,23 +58,44 @@ class _TorchlerPageState extends State<TorchlerPage> {
                 ),
               ),
             ),
-            SliderTheme(
-              data: SliderTheme.of(context).copyWith(
-                activeTrackColor: kActiveButton,
-                inactiveTrackColor: kInactiveButton,
-                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 13.0),
-                thumbColor: kActiveButton,
-              ),
-              child: Slider(
-                onChanged: (newValue){
-                  setState(() {
-                    brightness = newValue.round();
-                  });
-                },
-                value: brightness.toDouble(),
-                min: 0,
-                max: 100,
-              ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 1,
+                  child: Icon(
+                    Icons.brightness_low,
+                    color: selectedButton == Button.onButton ? kIconOnColor : kIconOffColor
+                  ),
+                ),
+                SliderTheme(
+                  data: SliderTheme.of(context).copyWith(
+                    activeTrackColor: kActiveButton,
+                    inactiveTrackColor: kInactiveButton,
+                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 13.0),
+                    thumbColor: kActiveButton,
+                  ),
+                  child: Expanded(
+                    flex: 7,
+                    child: Slider(
+                      onChanged: (newValue){
+                        setState(() {
+                          brightness = newValue.round();
+                        });
+                      },
+                      value: brightness.toDouble(),
+                      min: 0,
+                      max: 100,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Icon(
+                    Icons.brightness_high,
+                    color: selectedButton == Button.onButton ? kIconOnColor : kIconOffColor,
+                  ),
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
